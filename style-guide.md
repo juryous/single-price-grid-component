@@ -29,5 +29,3 @@ The designs were created to the following widths:
 
 - Family: [Karla](https://fonts.google.com/specimen/Karla)
 - Weights: 400, 700
-
-<!-- 635 x 480 -->

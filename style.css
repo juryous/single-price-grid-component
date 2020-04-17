@@ -3,8 +3,13 @@
 }
 
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
   font-family: 'Karla', sans-serif;
   background: hsl(204, 43%, 93%);
+  padding: 20px;
 }
 
 h3 {
@@ -12,26 +17,19 @@ h3 {
   font-size: 1.1rem;
 }
 
-p {
-  color: white;
-  margin: 8px 0;
-}
-
-.container {
+.main {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-  margin: 0 auto;
-  width: fit-content;
+  width: 636px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .top {
   background-color: white;
   padding: 2em;
   padding-right: 4.5em;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
 .top h2 {
@@ -54,18 +52,13 @@ p {
   width: 100%;
 }
 
-.left {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: hsl(179, 62%, 43%);
-  width: 50%;
-  border-bottom-left-radius: 10px;
-  padding: 1.5em;
+.bottom>div {
+  flex: 1;
 }
 
-.left h3 {
-  margin: .8em 0;
+.left {
+  background-color: hsl(179, 62%, 43%);
+  padding: 1.5em 2em;
 }
 
 .dollar {
@@ -73,16 +66,17 @@ p {
   font-weight: 700;
 }
 
+.left p {
+  color: white;
+  margin: 8px 0;
+}
+
 .left span {
+  opacity: 0.6;
   font-weight: 200;
   font-size: .95rem;
   position: relative;
   bottom: .4em;
-}
-
-.full {
-  font-size: .97rem;
-  margin: .9em 0;
 }
 
 button {
@@ -91,25 +85,42 @@ button {
   background-color: hsl(71, 73%, 54%);
   border: none;
   border-radius: 5px;
-  padding: 0.8em 5.6em;
-  margin: 1em 0;
+  width: 100%;
+  padding: 13px 0;
+  margin: 1.2em 0;
   color: white;
 }
 
 .right {
   background-color: #4ABEBD;
-  width: 50%;
   padding: 2.2em;
   padding-top: 1.2em;
-  border-bottom-right-radius: 10px;
 }
 
-.right h3 {
-  margin-bottom: 1.3em;
+ul {
+  list-style: none;
+  padding: 0;
+  color: white;
+  opacity: .6;
+  font-size: .9rem;
+  line-height: 1.4em;
 }
 
-.right p {
-  font-size: 0.8rem;
-  font-weight: 200;
-  margin: 5px 0;
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+
+  .main {
+    min-width: 300px;
+  }
+
+  .top {
+    padding: 1.5em;
+  }
+
+  .bottom {
+    flex-direction: column;
+  }
+
 }
